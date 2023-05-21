@@ -1,0 +1,19 @@
+<div>
+    <h1>Hola Usuario:  {{datos_usuario.name}} tu edad es {{datos_usuario.edad}}</h1>
+    {{#if datos_usuario.isAdmin}}
+        
+        <h3>Es administrador</h3>
+        <h4>LISTADO DE USUARIOS:</h4>
+        
+        {{#each usuarios}}
+     
+            <ul>
+                <li>Nombre:  {{this.name}}</li>
+                <li>Edad: {{this.edad}}</li>
+            </ul>
+
+        {{/each}}
+        
+         {{else}} No es admin
+    {{/if}}
+</div>
